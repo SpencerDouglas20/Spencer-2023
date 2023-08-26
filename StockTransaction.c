@@ -16,7 +16,7 @@ int main()
     printf("\nCommission paid on the sale > \t\t$%.2f" , c2);
     if(totalSale > totalBuy)
     {
-        printf("\n\nProftis made > \t\t\t$%.2f" , (totalSale - totalBuy));
+        printf("\n\nProfits made > \t\t\t$%.2f" , (totalSale - totalBuy));
     }
     else
     {
