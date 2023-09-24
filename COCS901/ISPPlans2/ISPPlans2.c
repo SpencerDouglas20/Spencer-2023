@@ -65,7 +65,7 @@ char getPlan()
 
 bool isPlanValid(char plan)
 {
-   if(plan = 'a')
+   if(plan == 'a'||plan == 'b'|| plan == 'c'||plan == 'A'||plan == 'B'||plan == 'C')
    {
     return true;
    }
@@ -91,14 +91,60 @@ bool areHoursValid(unsigned short hours)
 
 int main()
 {
-    if(isPlanValid(getPlan())==true)
+    char plan = getPlan();
+    bool x = isPlanValid(plan);
+    
+    if(!x)
     {
-        printf("true");
-    }
-    else{
         printf("Try again with a valid plan...\n");
         system("pause");
         return 0;
+    }
+    else
+    {
+        printf("Enter the number of hours used: ");
+        unsigned short hours;
+        scanf("%hu" , &hours);
+        bool z = areHoursValid(hours);
+        if(!z)
+        {
+            printf("Try again with a valid number of hours...\n");
+            system("pause");
+            return 0;
+        }
+        else
+        {
+            switch (plan)
+            {
+            case 'a':
+            calculatePkgA(hours);
+                break;
+
+            case 'A':
+            calculatePkgA(hours);
+                break;
+
+            case 'b':
+            calculatePkgB(hours);
+                break;
+
+            case 'B':
+            calculatePkgB(hours);
+                break;
+
+            case 'c':
+            calculatePkgC(hours);
+                break;
+
+            case 'C':
+            calculatePkgC(hours);
+                break;
+            
+            default:
+            printf("Error 404");
+                break;
+            }
+        }
     }
     
 }
