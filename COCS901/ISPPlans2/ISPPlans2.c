@@ -65,13 +65,13 @@ char getPlan()
 
 bool isPlanValid(char plan)
 {
-   if(plan != 'a' || 'b' || 'c' || 'A' || 'B' || 'C')
+   if(plan = 'a')
    {
-    return false;
+    return true;
    }
    else
    {
-    return true;
+    return false;
    }
 }
 
@@ -91,12 +91,14 @@ bool areHoursValid(unsigned short hours)
 
 int main()
 {
-    char plan = getPlan();
-    isPlanValid(plan);
-    if(isPlanValid == false)
+    if(isPlanValid(getPlan())==true)
     {
+        printf("true");
+    }
+    else{
         printf("Try again with a valid plan...\n");
         system("pause");
+        return 0;
     }
     
 }
