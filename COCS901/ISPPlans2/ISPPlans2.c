@@ -65,7 +65,7 @@ char getPlan()
 
 bool isPlanValid(char plan)
 {
-   if(plan != 'a' || 'b' || 'c')
+   if(plan != 'a' || 'b' || 'c' || 'A' || 'B' || 'C')
    {
     return false;
    }
@@ -93,5 +93,10 @@ int main()
 {
     char plan = getPlan();
     isPlanValid(plan);
-
+    if(isPlanValid == false)
+    {
+        printf("Try again with a valid plan...\n");
+        system("pause");
+    }
+    
 }
