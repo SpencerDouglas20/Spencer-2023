@@ -146,5 +146,6 @@ int main()
             }
         }
     }
+    system("pause");
     
 }

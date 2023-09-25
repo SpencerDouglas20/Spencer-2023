@@ -41,4 +41,6 @@ int main()
     scanf("%f",&yCord);
 
     findQuadrant(xCord,yCord);
+    printf("\n");
+    system("pause");
 }

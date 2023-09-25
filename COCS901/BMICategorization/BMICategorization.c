@@ -40,4 +40,6 @@ int main()
     float BMI = calculateBMI(weight,height);
 
     reportBMIStatus(BMI);
+    printf("\n");
+    system("pause");
 }
