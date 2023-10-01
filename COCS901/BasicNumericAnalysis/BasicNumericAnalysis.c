@@ -49,6 +49,6 @@ int main()
 	 }   
     }
     printf("\nLargest:%16d",large);
-
- 
+    printf("\n");
+    system("pause");
 }
