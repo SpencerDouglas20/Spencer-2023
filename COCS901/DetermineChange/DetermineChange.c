@@ -3,7 +3,7 @@
 
 void calculateChange(const float paid, const float cost)
 {
-    int dollars,quaters,dimes,nickels,pennies;
+    int dollars,quarters,dimes,nickels,pennies;
     double remainder;
 
     if(paid < cost)
@@ -18,14 +18,14 @@ void calculateChange(const float paid, const float cost)
     double change = paid - cost;
     dollars =  change / 1;
     remainder = fmod(change,1);
-    quaters = remainder / .25;
+    quarters = remainder / .25;
     remainder = fmod(remainder,.25);
     dimes = remainder / .10;
     remainder = fmod(remainder,.1);
     nickels = remainder / .5;
     remainder = fmod(remainder,.5);
     pennies = remainder /.01;
-    printf("You are owed %d dollars, %d quaters, %d dimes, %d nickels, and %d pennies.",dollars,quaters,dimes,nickels,pennies);
+    printf("You are owed %d dollars, %d quarters, %d dimes, %d nickels, and %d pennies.",dollars,quarters,dimes,nickels,pennies);
     }
 
 }
