@@ -67,5 +67,5 @@ int main()
     sort(arr,count);
     printf("Histogram:\n===========================\n");
     printHistogram(arr,count);
-
+    system("pasue");
 }
