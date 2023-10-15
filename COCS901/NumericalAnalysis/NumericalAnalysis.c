@@ -11,7 +11,7 @@ int scoresFill(unsigned short scores[],const unsigned short count)
 {
     for(int i=0; i<count; i++)
     {
-        scores[i] = rand() % 101;;
+        scores[i] = rand() % 101;
     }
 }
 
