@@ -1,22 +1,23 @@
 #include <stdio.h>
 
-int TOH(int n,char x,char y,char z)
+int TOH(int n,char x,char y,char z, short count)
 {
-    int count = 0;
-    if(n>0){
-        count = TOH(n-1, x, z, y);
-        printf("\nMove disk %d from peg %c to peg %c",n, x, y);
-        count++;
-        count += TOH(n-1, z, y, x);
+    if (n>0){
+        count = TOH(n-1, x, z, y, count);
+        count += 1;
+        printf("Step %2d: Move disk %d from peg %c to peg %c\n",count,n, x, y);
+        count = TOH(n-1, z, y, x, count);
     }
     return count;
 }
 
+
+
 int main()
 {
+    short count = 0;
     int sc;
     int n = 3; 
-    sc = TOH(n, 'A', 'C', 'B'); 
-    printf("\nTowers of Hanoi completed in %d steps", sc);
-    return 0;
+    sc = TOH(n, 'A', 'B', 'C',count); 
+    system("pause");
 }
