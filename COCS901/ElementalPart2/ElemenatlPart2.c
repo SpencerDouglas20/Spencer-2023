@@ -19,7 +19,7 @@ int main()
     FILE *fptr = fopen("elements.txt","w");
     FILE *fp = fopen("elements.bin","wb");
 
-    for(int i = 0;i<2;i++)
+    for(int i = 0;i<10;i++)
     {
         printf("Enter the Atomic number: ");
         scanf("%d", &elements[i].elementNum);
@@ -42,7 +42,7 @@ int main()
         }
     }
     
-    for(int i=0; i<2; i++)
+    for(int i=0; i<10; i++)
     {
         fprintf(fptr,"%d\n",elements[i].elementNum);
         fprintf(fptr,"%s\n",elements[i].elementName);
