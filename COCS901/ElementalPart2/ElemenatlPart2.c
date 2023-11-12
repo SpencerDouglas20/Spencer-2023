@@ -55,4 +55,7 @@ int main()
     }
 
     fwrite(elements,sizeof(elements),1,fp);
+
+    fclose(fptr);
+    fclose(fp);
 }
