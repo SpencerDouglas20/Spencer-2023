@@ -16,10 +16,10 @@ struct element_t
 int main()
 {
     struct element_t elements[10];
-    FILE *fptr = fopen("elements.txt","w+");
-    FILE *fp = fopen("elements.bin","wb+");
+    FILE *fptr = fopen("elements.txt","w");
+    FILE *fp = fopen("elements.bin","wb");
 
-    for(int i = 0;i<10;i++)
+    for(int i = 0;i<2;i++)
     {
         printf("Enter the Atomic number: ");
         scanf("%d", &elements[i].elementNum);
@@ -42,7 +42,7 @@ int main()
         }
     }
     
-    for(int i=0; i<10; i++)
+    for(int i=0; i<2; i++)
     {
         fprintf(fptr,"%d\n",elements[i].elementNum);
         fprintf(fptr,"%s\n",elements[i].elementName);
