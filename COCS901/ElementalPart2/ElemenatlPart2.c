@@ -16,8 +16,8 @@ struct element_t
 int main()
 {
     struct element_t elements[10];
-    FILE *fptr = fopen("elements.txt","w");
-    FILE *fp = fopen("elements.bin","wb");
+    FILE *fptr = fopen("elements.txt","w+");
+    FILE *fp = fopen("elements.bin","wb+");
 
     for(int i = 0;i<10;i++)
     {
